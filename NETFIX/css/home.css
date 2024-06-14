@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255 255 255);
+}
+
+.navbar{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 5%;
+    z-index: 13;
+}
+
+.navbar_brand{
+    width: 134px;
+    height: 100%;
+}
+
+.brand_logo{
+    width: 100%;
+    height: 100%;
+}
+
+.language_drop_down{
+    background: transparent;
+    border: none;
+    color: rgb(255 255 255);
+}
+
+.language_drop_down:focus{
+    outline: none;
+}
+
+.drop_down_container{
+    border: 1.4px solid rgb(255 255 255);
+    padding: 4.5px 15px;
+    border-radius: 5px;
+}
+
+.signin_button{
+    background-color: rgb(220, 3, 15);
+    border: 1px solid rgb(220, 3, 15);
+    padding: 0.25rem 0.7rem;
+    border-radius: 4px;
+    color: rgb(255 255 255);
+    font-size: 15px;
+}
+
+.navbar_nav_items{
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+}
+
+.hero_bg_img_container{
+    width: 100%;
+    height: 90vh;
+}
+
+.hero_bg_overlay{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 90vh;
+    background: rgba(0, 0, 0, 0.65);
+    background-image: linear-gradient( to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100% );
+}
+
+.hero_bg_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero_card{
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hero_card h1{
+    font-size: 50px;
+}
+
+.hero_card p{
+    font-size: 24px;
+}
+
+.hero_card .pi{
+    font-size: 20px;
+}
+
+.email_input{
+    border: none;
+    background: transparent;
+    width: 100%;
+    height: 50px;
+    font-size: 17px;
+    padding-left: 10px;
+    z-index: 3;
+}
+
+.email_input:focus{
+    outline: none;
+}
+
+.form_container{
+    background-color: rgb(255 255 255);
+    width: 40%;
+    height: 50px;
+    border-radius: 3.5px;
+    position: absolute;
+    left: 19%;
+    top: 105%;
+}
+
+.email_label{
+    color: rgb(0, 0, 0);
+    position: absolute;
+    left: 2%;
+    bottom: 25%;
+    color: rgb(153, 149, 149);
+    transition: 0.4s;
+    z-index: 2;
+}
+
+.email_input:focus + .email_label{
+    top: 0.05rem;
+    font-size: 12px;
+}
+
+.email_input:not(:placeholder-shown).email_input:not(:focus) +.email_label{
+    top: 0.05rem;
+    font-size: 12px;
+}
+
+.email_form_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit{
+    color: rgb(255, 255, 255);
+    background-color: rgb(220, 3, 15);
+    border: 1px solid rgb(220, 3, 15);
+    border-radius: 4px;
+    padding: 3px 10px;
+    font-size: 28px;
+    position: absolute;
+    top: 0%;
+    left: 103%;
+}
+
+.separation {
+    height: 7px;
+    background-color: rgb(46, 44, 44);
+    position: relative;
+    z-index: 20;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    max-width: 70vw;
+    margin: auto;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.secImg {
+    position: relative;
+}
+
+.secImg img {
+    width: 555px;
+    position: relative;
+    z-index: 10;
+}
+
+.secImg video {
+    position: absolute;
+    top: 51px;
+    right: 0;
+    width: 555px;
+}
+
+section.first>div {
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+}
+
+section.first>div :nth-child(1) {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+
+section.first>div :nth-child(2) {
+    font-size: 24px;
+
+}
+
+
+.faq h2 {
+    text-align: center;
+    font-size: 48px;
+}
+
+.faq {
+    background: black;
+    color: white;
+    padding: 34px;
+    text-align: center;
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.accordion li label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: 0.7sec;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.accordion input[type="radio"]:checked + label +.content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+footer {
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 60px;
+}
+
+footer .questions {
+    padding: 34px 0;
+}
+
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+}
+
+
+
+@media screen and (max-width: 1300px) {
+
+    nav{
+        max-width: 90vw;
+    }
+
+    .first {
+        flex-wrap: wrap;
+    }
+
+    .secImg img {
+        width: 305px;
+    }
+
+    .secImg video {
+        width: 305px;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .faq h2 {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    footer {
+        max-width: 90vw;
+        padding: 75px 0;
+    }
+
+    .footer-item{
+        align-items: center;
+    }
+ 
+
+}
+
+
+
+@media screen and (max-width: 1300px) {
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}
+
+
+.footer a {
+    font-size: 14px;
+    color: white;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
